@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cristopher.calculadora.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/valor1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/valor2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLines="1"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rdOperacao"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/adicao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="+" />
+
+        <RadioButton
+            android:id="@+id/subtracao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-" />
+
+        <RadioButton
+            android:id="@+id/multiplicacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x" />
+
+        <RadioButton
+            android:id="@+id/divisao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular" />
+
+</LinearLayout>
