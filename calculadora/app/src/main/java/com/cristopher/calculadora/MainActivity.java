@@ -9,19 +9,247 @@ import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.RadioButton;
 import android.content.Context;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnDot;
+    Button btnSomar, btnSubtrair, btnMultiplicar, btnDividir, btnIgual, btnLimpar;
+    TextView valor1, valor2;
+    TextView operacao, resultado;
+    String result; //String para mostrar o resultado na TextView
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btCalcular = findViewById(R.id.btnCalcular);
+        //botoes de numeros da calculadora
+        btn1 = findViewById(R.id.btn1);
+        btn2 = findViewById(R.id.btn2);
+        btn3 = findViewById(R.id.btn3);
+        btn4 = findViewById(R.id.btn4);
+        btn5 = findViewById(R.id.btn5);
+        btn6 = findViewById(R.id.btn6);
+        btn7 = findViewById(R.id.btn7);
+        btn8 = findViewById(R.id.btn8);
+        btn9 = findViewById(R.id.btn9);
+        btn0 = findViewById(R.id.btn0);
 
-        btCalcular.setOnClickListener(onClickCalcular());
+        //botoes de operacoes
+        btnSomar = findViewById(R.id.btnSoma);
+        btnSubtrair = findViewById(R.id.btnSubtrair);
+        btnMultiplicar = findViewById(R.id.btnMultiplicar);
+        btnDividir = findViewById(R.id.btnDividir);
+        btnDot = findViewById(R.id.btnDot);
+        btnIgual = findViewById(R.id.btnIgual);
+        btnLimpar = findViewById(R.id.btnLimpar);
+
+        //campos com os valores
+        valor1 = findViewById(R.id.valor1);
+        valor2 = findViewById(R.id.valor2);
+        operacao = findViewById(R.id.operacao);
+        resultado = findViewById(R.id.resultado);
+
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(operacao.getText().toString().equals("?")){
+                    String v1 = valor1.getText().toString();
+                    valor1.setText(v1 + "1");
+                }else{
+                    String v2 = valor2.getText().toString();
+                    valor2.setText(v2 + "1");
+                }
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(operacao.getText().toString().equals("?")){
+                    String v1 = valor1.getText().toString();
+                    valor1.setText(v1 + "2");
+                }else{
+                    String v2 = valor2.getText().toString();
+                    valor2.setText(v2 + "2");
+                }
+            }
+        });
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(operacao.getText().toString().equals("?")){
+                    String v1 = valor1.getText().toString();
+                    valor1.setText(v1 + "3");
+                }else{
+                    String v2 = valor2.getText().toString();
+                    valor2.setText(v2 + "3");
+                }
+            }
+        });
+
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(operacao.getText().toString().equals("?")){
+                    String v1 = valor1.getText().toString();
+                    valor1.setText(v1 + "4");
+                }else{
+                    String v2 = valor2.getText().toString();
+                    valor2.setText(v2 + "4");
+                }
+            }
+        });
+
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(operacao.getText().toString().equals("?")){
+                    String v1 = valor1.getText().toString();
+                    valor1.setText(v1 + "5");
+                }else{
+                    String v2 = valor2.getText().toString();
+                    valor2.setText(v2 + "5");
+                }
+            }
+        });
+
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(operacao.getText().toString().equals("?")){
+                    String v1 = valor1.getText().toString();
+                    valor1.setText(v1 + "6");
+                }else{
+                    String v2 = valor2.getText().toString();
+                    valor2.setText(v2 + "6");
+                }
+            }
+        });
+
+        btn7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(operacao.getText().toString().equals("?")){
+                    String v1 = valor1.getText().toString();
+                    valor1.setText(v1 + "7");
+                }else{
+                    String v2 = valor2.getText().toString();
+                    valor2.setText(v2 + "7");
+                }
+            }
+        });
+
+        btn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(operacao.getText().toString().equals("?")){
+                    String v1 = valor1.getText().toString();
+                    valor1.setText(v1 + "8");
+                }else{
+                    String v2 = valor2.getText().toString();
+                    valor2.setText(v2 + "8");
+                }
+            }
+        });
+
+        btn9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(operacao.getText().toString().equals("?")){
+                    String v1 = valor1.getText().toString();
+                    valor1.setText(v1 + "9");
+                }else{
+                    String v2 = valor2.getText().toString();
+                    valor2.setText(v2 + "9");
+                }
+            }
+        });
+
+        btn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(operacao.getText().toString().equals("?")){
+                    String v1 = valor1.getText().toString();
+                    valor1.setText(v1 + "0");
+                }else{
+                    String v2 = valor2.getText().toString();
+                    valor2.setText(v2 + "0");
+                }
+            }
+        });
+
+        btnDot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (operacao.getText().toString().equals("?")){
+                    String v1 = valor1.getText().toString();
+                    if (!v1.contains(".")){
+                        valor1.setText(v1 + ".");
+                    }
+                }else{
+                    String v2 = valor2.getText().toString();
+                    if (!v2.contains(".")){
+                        valor2.setText(v2 + ".");
+                    }
+                }
+            }
+        });
+
+        btnSomar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                operacao.setText("+");
+            }
+        });
+
+        btnSubtrair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                operacao.setText("-");
+            }
+        });
+
+        btnMultiplicar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                operacao.setText("x");
+            }
+        });
+
+        btnDividir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                operacao.setText("/");
+            }
+        });
+
+        btnIgual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                double val1, val2, resultOp;
+                val1 = Double.valueOf(valor1.getText().toString());
+                val2 = Double.valueOf(valor2.getText().toString());
+                resultOp = calcular(val1, val2, operacao.getText().toString());
+                result = String.valueOf(resultOp);
+                resultado.setText(result);
+            }
+        });
+
+        btnLimpar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                operacao.setText("?");
+                valor1.setText(null);
+                valor2.setText(null);
+                resultado.setText(null);
+            }
+        });
     }
 
-    private View.OnClickListener onClickCalcular(){
+    /*private View.OnClickListener onClickCalcular(){
         return new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -45,10 +273,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
-    }
+    }*/
 
-    private int calcular(int valor1, int valor2, String operacao){
-        int result = 0;
+    private double calcular(double valor1, double valor2, String operacao){
+        double result = 0;
         switch (operacao){
             case "+":
                 result = valor1 + valor2;
