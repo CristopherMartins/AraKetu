@@ -10,13 +10,15 @@ import android.widget.RadioGroup;
 import android.widget.RadioButton;
 import android.content.Context;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnDot;
-    Button btnSomar, btnSubtrair, btnMultiplicar, btnDividir, btnIgual, btnLimpar;
+    Button btnSomar, btnSubtrair, btnMultiplicar, btnDividir, btnIgual, btnLimpar, btnBackSpace;
     TextView valor1, valor2;
     TextView operacao, resultado;
     String result; //String para mostrar o resultado na TextView
+    Boolean validador = true; // validador para evitar que entrem novos parametros no campo valor2 após o cálculo
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,11 +57,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(operacao.getText().toString().equals("?")){
-                    String v1 = valor1.getText().toString();
-                    valor1.setText(v1 + "1");
+                     String v1 = valor1.getText().toString();
+                     valor1.setText(v1 + "1");
                 }else{
-                    String v2 = valor2.getText().toString();
-                    valor2.setText(v2 + "1");
+                     if(validador){
+                         String v2 = valor2.getText().toString();
+                         valor2.setText(v2 + "1");
+                     }
                 }
             }
         });
@@ -71,8 +75,10 @@ public class MainActivity extends AppCompatActivity {
                     String v1 = valor1.getText().toString();
                     valor1.setText(v1 + "2");
                 }else{
-                    String v2 = valor2.getText().toString();
-                    valor2.setText(v2 + "2");
+                    if(validador){
+                        String v2 = valor2.getText().toString();
+                        valor2.setText(v2 + "2");
+                    }
                 }
             }
         });
@@ -84,8 +90,10 @@ public class MainActivity extends AppCompatActivity {
                     String v1 = valor1.getText().toString();
                     valor1.setText(v1 + "3");
                 }else{
-                    String v2 = valor2.getText().toString();
-                    valor2.setText(v2 + "3");
+                    if(validador){
+                        String v2 = valor2.getText().toString();
+                        valor2.setText(v2 + "3");
+                    }
                 }
             }
         });
@@ -97,8 +105,10 @@ public class MainActivity extends AppCompatActivity {
                     String v1 = valor1.getText().toString();
                     valor1.setText(v1 + "4");
                 }else{
-                    String v2 = valor2.getText().toString();
-                    valor2.setText(v2 + "4");
+                    if(validador){
+                        String v2 = valor2.getText().toString();
+                        valor2.setText(v2 + "4");
+                    }
                 }
             }
         });
@@ -110,8 +120,10 @@ public class MainActivity extends AppCompatActivity {
                     String v1 = valor1.getText().toString();
                     valor1.setText(v1 + "5");
                 }else{
-                    String v2 = valor2.getText().toString();
-                    valor2.setText(v2 + "5");
+                    if(validador){
+                        String v2 = valor2.getText().toString();
+                        valor2.setText(v2 + "5");
+                    }
                 }
             }
         });
@@ -123,8 +135,10 @@ public class MainActivity extends AppCompatActivity {
                     String v1 = valor1.getText().toString();
                     valor1.setText(v1 + "6");
                 }else{
-                    String v2 = valor2.getText().toString();
-                    valor2.setText(v2 + "6");
+                    if(validador){
+                        String v2 = valor2.getText().toString();
+                        valor2.setText(v2 + "6");
+                    }
                 }
             }
         });
@@ -136,8 +150,10 @@ public class MainActivity extends AppCompatActivity {
                     String v1 = valor1.getText().toString();
                     valor1.setText(v1 + "7");
                 }else{
-                    String v2 = valor2.getText().toString();
-                    valor2.setText(v2 + "7");
+                    if(validador){
+                        String v2 = valor2.getText().toString();
+                        valor2.setText(v2 + "7");
+                    }
                 }
             }
         });
@@ -149,8 +165,10 @@ public class MainActivity extends AppCompatActivity {
                     String v1 = valor1.getText().toString();
                     valor1.setText(v1 + "8");
                 }else{
-                    String v2 = valor2.getText().toString();
-                    valor2.setText(v2 + "8");
+                    if(validador){
+                        String v2 = valor2.getText().toString();
+                        valor2.setText(v2 + "8");
+                    }
                 }
             }
         });
@@ -162,8 +180,10 @@ public class MainActivity extends AppCompatActivity {
                     String v1 = valor1.getText().toString();
                     valor1.setText(v1 + "9");
                 }else{
-                    String v2 = valor2.getText().toString();
-                    valor2.setText(v2 + "9");
+                    if(validador){
+                        String v2 = valor2.getText().toString();
+                        valor2.setText(v2 + "9");
+                    }
                 }
             }
         });
@@ -175,8 +195,10 @@ public class MainActivity extends AppCompatActivity {
                     String v1 = valor1.getText().toString();
                     valor1.setText(v1 + "0");
                 }else{
-                    String v2 = valor2.getText().toString();
-                    valor2.setText(v2 + "0");
+                    if(validador){
+                        String v2 = valor2.getText().toString();
+                        valor2.setText(v2 + "0");
+                    }
                 }
             }
         });
@@ -190,9 +212,11 @@ public class MainActivity extends AppCompatActivity {
                         valor1.setText(v1 + ".");
                     }
                 }else{
-                    String v2 = valor2.getText().toString();
-                    if (!v2.contains(".")){
-                        valor2.setText(v2 + ".");
+                    if(validador){
+                        String v2 = valor2.getText().toString();
+                        if (!v2.contains(".")){
+                            valor2.setText(v2 + ".");
+                        }
                     }
                 }
             }
@@ -235,6 +259,8 @@ public class MainActivity extends AppCompatActivity {
                 resultOp = calcular(val1, val2, operacao.getText().toString());
                 result = String.valueOf(resultOp);
                 resultado.setText(result);
+                Toast.makeText(MainActivity.this, "O resultado da operação é: " + resultOp, Toast.LENGTH_SHORT).show();
+                validador = false;
             }
         });
 
@@ -245,6 +271,14 @@ public class MainActivity extends AppCompatActivity {
                 valor1.setText(null);
                 valor2.setText(null);
                 resultado.setText(null);
+                validador = true;
+            }
+        });
+
+        btnBackSpace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TextView.
             }
         });
     }

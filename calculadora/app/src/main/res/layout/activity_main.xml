@@ -205,14 +205,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="1.0"
-        android:orientation="vertical"
-        android:layout_below="@+id/wrapper5">
-
+        android:gravity="center">
         <Button
             android:id="@+id/btnLimpar"
-            android:layout_width="match_parent"
+            android:text="Limpar"
             android:layout_height="wrap_content"
-            android:text="Limpar" />
+            android:layout_width="0dp"
+            android:layout_weight=".40" />
+
+        <Button
+            android:id="@+id/btnBackSpace"
+            android:text="BackSpace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4" />
 
     </LinearLayout>
 </LinearLayout>
