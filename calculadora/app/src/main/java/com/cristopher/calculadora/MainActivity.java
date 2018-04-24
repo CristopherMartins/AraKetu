@@ -13,12 +13,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnDot;
-    Button btnSomar, btnSubtrair, btnMultiplicar, btnDividir, btnIgual, btnLimpar, btnBackSpace;
-    TextView valor1, valor2;
-    TextView operacao, resultado;
-    String result; //String para mostrar o resultado na TextView
-    Boolean validador = true; // validador para evitar que entrem novos parametros no campo valor2 após o cálculo
+    private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnDot;
+    private Button btnSomar, btnSubtrair, btnMultiplicar, btnDividir, btnIgual, btnLimpar, btnBackSpace;
+    private TextView valor1, valor2;
+    private TextView operacao, resultado;
+    private String result; //String para mostrar o resultado na TextView
+    private Boolean validador = true; // validador para evitar que entrem novos parametros no campo valor2 após o cálculo
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         btnDot = findViewById(R.id.btnDot);
         btnIgual = findViewById(R.id.btnIgual);
         btnLimpar = findViewById(R.id.btnLimpar);
+        btnBackSpace = findViewById(R.id.btnBackSpace);
 
         //campos com os valores
         valor1 = findViewById(R.id.valor1);
@@ -278,7 +279,21 @@ public class MainActivity extends AppCompatActivity {
         btnBackSpace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView.
+                if (operacao.getText().toString().equals("?")){
+                    String v1 = valor1.getText().toString();
+                    int input = v1.length();
+                    if (input > 0){
+                        valor1.setText(v1.substring(0, input -1));
+                    }
+                }else{
+                    if(validador){
+                        String v2 = valor2.getText().toString();
+                        int input = v2.length();
+                        if (input > 0){
+                            valor2.setText(v2.substring(0, input -1));
+                        }
+                    }
+                }
             }
         });
     }
