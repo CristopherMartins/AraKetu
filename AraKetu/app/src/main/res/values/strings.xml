@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AraKetu</string>
+    <string name="btn_sou_musico">SOU UM MÚSICO</string>
+    <string name="btn_sou_bar">SOU UM BAR</string>
+    <string name="txt_quem_sou">IDENTIFIQUE-SE POR FAVOR:</string>
+    <string name="formulario_nome">NOME</string>
+    <string name="formulario_endereco">ENDEREÇO</string>
+    <string name="formulario_telefone">TELEFONE</string>
+    <string name="formulario_descricao_bar">FALE UM POUCO SOBRE SEU ESTABELECIMENTO</string>
+    <string name="formulario_descricao_musico">FALE UM POUCO SOBRE VOCÊ</string>
+    <string name="formulario_musico_pagina">PÁGINA</string>
+    <string name="formulario_musico_estilo">ESTILO:</string>
+    <string name="txt_faca_cadastro">FAÇA SEU CADASTRO:</string>
+    <string name="menu_salvar">SALVAR</string>
+    <string name="menu_proximo">PROXIMO</string>
+    <string name="home_titulo">BEM VINDO, \n O QUE QUER FAZER?</string>
+</resources>

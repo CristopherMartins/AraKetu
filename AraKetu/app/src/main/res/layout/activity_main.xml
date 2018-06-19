@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="15dp"
+            android:background="#6f197b"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:textColor="#000000"
+            android:text="@string/txt_quem_sou"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_musico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/btn_musico_bar"
+            android:text="@string/btn_sou_musico"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:onClick="vaiParaFormularioMusico"/>
+
+        <Button
+            android:id="@+id/btn_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/btn_musico_bar"
+            android:text="@string/btn_sou_bar"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:onClick="vaiParaFormularioBar"/>
+
+    </LinearLayout>
+</ScrollView>
