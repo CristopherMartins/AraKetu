@@ -46,6 +46,6 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public Musico pegaMusicos(){
-        SQLiteDatabase 
+        SQLiteDatabase
     }
 }

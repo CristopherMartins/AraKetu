@@ -42,55 +42,6 @@
                 android:padding="2dp"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:text="BARES"
-                android:background="@drawable/btn_musico_bar"
-                android:layout_margin="10dp"
-                android:drawableLeft="@drawable/icon_map_box"
-                android:padding="2dp"/>
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:text="EDITAR"
-                android:layout_margin="10dp"
-                android:background="@drawable/btn_musico_bar"
-                android:drawableLeft="@drawable/icon_pencil"
-                android:padding="2dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:text="BARES"
-                android:background="@drawable/btn_musico_bar"
-                android:layout_margin="10dp"
-                android:drawableLeft="@drawable/icon_list_number"
-                android:padding="2dp"/>
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:text="MUSICOS"
-                android:layout_margin="10dp"
-                android:background="@drawable/btn_musico_bar"
-                android:drawableLeft="@drawable/icon_list_number"
-                android:padding="2dp"/>
-        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
