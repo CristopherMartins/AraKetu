@@ -44,4 +44,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
         db.insert("Musico",null,dados);
     }
+
+    public Musico pegaMusicos(){
+        SQLiteDatabase 
+    }
 }
